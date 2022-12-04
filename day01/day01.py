@@ -27,3 +27,6 @@ print(f'elf #{elf_no+1} has total calorie of {elf_fruit} in the bag!')
 # Elves do not count from zero! So I will add one. 
 print('the answer is: ', elf_fruit)
 
+print(elf_fruit)
+
+
