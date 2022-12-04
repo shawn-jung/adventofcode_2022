@@ -14,14 +14,16 @@ for i in range(len(lines)):
         carries[elfno] = carries.get(elfno,0) + fruit #sum up fruits of each elf's bag
 
 
-# wanted to use itemgetter 
+# wanted to use lambda to get second item, value
+sorted(carries.items(), key = lambda x: x[1], reverse=True)[0:3]
+
+# May I can use itemgetter 
 from operator import itemgetter 
 sorted(carries.items(), key = itemgetter(1), reverse=True)[0:3]
 
-sorted(carries.items(), key = lambda x: x[1], reverse=True)
-
-elf_no = sorted(carries.items(), key = lambda x: x[1], reverse=True)[0][0]
-elf_fruit = sorted(carries.items(), key = lambda x: x[1], reverse=True)[0][1]
+top_elf = sorted(carries.items(), key = lambda x: x[1], reverse=True)[0]
+elf_no = top_elf[0]
+elf_fruit = top_elf[1]
 
 print(f'elf #{elf_no+1} has total calorie of {elf_fruit} in the bag!')
 # Elves do not count from zero! So I will add one. 
