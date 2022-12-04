@@ -25,3 +25,6 @@ elf_fruit = sorted(carries.items(), key = lambda x: x[1], reverse=True)[0][1]
 print(f'elf #{elf_no+1} has total calorie of {elf_fruit} in the bag!')
 # Elves do not count from zero! So I will add one. 
 
+print(elf_fruit)
+
+
