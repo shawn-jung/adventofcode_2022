@@ -1,5 +1,6 @@
 # open the text file
-with open('puzzle_input.txt') as file_txt:
+file_name = 'puzzle_input.txt')
+with open(file_name) as file_txt:
     lines = [line.rstrip().lstrip() for line in file_txt]
 
 # setting up variables     
@@ -11,7 +12,7 @@ for i in range(len(lines)):
         elfno += 1
     else:
         fruit = int(lines[i])
-        carries[elfno] = carries.get(elfno,0) + fruit #sum up fruits of each elf's bag
+        carries[elfno] = fruit + carries.get(elfno,0) #sum up fruits of each elf's bag
 
 
 # wanted to use lambda to get second item, value
@@ -28,7 +29,4 @@ elf_fruit = top_elf[1]
 print(f'elf #{elf_no+1} has total calorie of {elf_fruit} in the bag!')
 # Elves do not count from zero! So I will add one. 
 print('the answer is: ', elf_fruit)
-
-print(elf_fruit)
-
 
